@@ -24,7 +24,8 @@ class RequestHandler {
 
     private HttpMapping buildHttpMapping(Controller controller, RequestMapping requestMapping) {
         String method = requestMapping.method().toString();
-        String path = controller.value() + requestMapping.path();
+        String path = controller.value() + "/" + requestMapping.path();
+        path = path.replaceAll("/+", "/");
         return new HttpMapping(path, method);
     }
 
