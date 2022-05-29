@@ -17,18 +17,23 @@
         <maven.compiler.target>17</maven.compiler.target>
         <guava.version>31.1-jre</guava.version>
         <junit.version>4.13.2</junit.version>
+        <jasypt.version>1.9.3</jasypt.version>
     </properties>
     <packaging>jar</packaging>
 
 
     <dependencies>
         <dependency>
+            <groupId>org.jasypt</groupId>
+            <artifactId>jasypt</artifactId>
+            <version>${jasypt.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
